@@ -1,0 +1,223 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Osward', sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+    color: #2c2b2b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+.header {
+    background-image: url(../images/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    min-height: 700px;
+    color: #ffffff;
+}
+
+.header__top {
+    padding: 47px 0 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phone {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 54px;
+}
+
+.header__content {
+    padding-top: 60px;
+}
+
+.header__title {
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 107px;
+    text-transform: uppercase;
+}
+
+.header__subtitle {
+    font-size: 36px;
+    line-height: 54px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.header__text {
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+.button {
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    padding: 14px 54px 15px;
+    background-color: #5a0d67;
+}
+
+.button:hover {
+    color: #5a0d67;
+    background-color: #fff;
+}
+
+.header__social {
+    padding: 70px 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header__social-link {
+    margin-right: 10px;
+}
+
+.header__images {
+    position: absolute;
+    right: 0;
+    bottom: -270px;
+}
+
+
+/** services  */
+
+.services {
+    padding-top: 350px;
+}
+
+.title {
+    color: #21062a;
+    font-size: 36px;
+    line-height: 54px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.title::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #21062a;
+    position: absolute;
+    top: 20px;
+    margin-left: 20px;
+}
+
+.services__inner {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.services__content {
+    width: 505px;
+    margin-right: 96px;
+}
+
+.services__content-box {}
+
+.services__content-title {
+    color: #5a0d67;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+.services__content-textbox {
+    margin-bottom: 57px;
+}
+
+.services__content-text {
+    margin-bottom: 12px;
+}
+
+.button--decor {
+    margin-top: -7px;
+    color: #ffffff;
+    position: relative;
+}
+
+.button--decor::after {
+    content: 'ЖМИ';
+    color: #c4c4c4;
+    margin-left: 130px;
+    position: absolute;
+}
+
+.button--decor::before {
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: #c4c4c4;
+    position: absolute;
+    right: -65px;
+    top: 24px;
+}
+
+.services__list {
+    list-style: none;
+    counter-reset: my-counter;
+}
+
+.services__item {
+    counter-increment: my-counter;
+    border: 1px solid #c4c4c4;
+    margin-bottom: 12px;
+    width: 450px;
+    padding: 10px 15px 10px 113px;
+    position: relative;
+    transition: all .5s;
+}
+
+.services__item::before {
+    content: '0' counter(my-counter);
+    position: absolute;
+    left: 20px;
+    font-size: 36px;
+    line-height: 54px;
+    font-weight: 400;
+    color: #c4c4c4;
+    transform: rotate(270deg);
+    transition: all .5s;
+}
+
+.services__item:hover {
+    border: 2px solid #5a0d67;
+    width: 500px;
+}
+
+.services__item:hover .services__item-title {
+    color: #5a0d67;
+}
+
+.services__item:hover::before {
+    color: #5a0d67;
+}
+
+.services__item-title {
+    font-size: 24px;
+    font-weight: 300;
+}
